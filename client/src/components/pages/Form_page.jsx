@@ -20,7 +20,7 @@ const Form_page = () => {
   const [Pathname, setPathname] = useState("");
 
   const addEmployee = () => {
-    Axios.post("http://localhost:8080/api/v1/employee", {
+    Axios.post("http://localhost:8080/create", {
       Reponame: Reponame,
       Status: Status,
       QueuedAt: QueuedAt,
@@ -32,8 +32,7 @@ const Form_page = () => {
       Pathname: Pathname,
     }).then(() => {
       console.log("done");
-    }); 
-    console.log(Status);
+    });
   };
 
   return (
@@ -54,7 +53,7 @@ const Form_page = () => {
                 <input
                   type="string"
                   placeholder="Enter your Repository Name"
-                  required
+                  
                   onChange={(event) => {
                     setReponame(event.target.value);
                   }}
@@ -125,7 +124,7 @@ const Form_page = () => {
                 <input
                   type="string"
                   placeholder="Eg: G402"
-                  required
+                  
                   onChange={(event) => {
                     setRuleid(event.target.value);
                   }}
@@ -137,7 +136,7 @@ const Form_page = () => {
                 <input
                   type="string"
                   placeholder="Eg: TLS InsecureSkipVerify set true."
-                  required
+                  
                   onChange={(event) => {
                     setdescription(event.target.value);
                   }}
@@ -145,11 +144,11 @@ const Form_page = () => {
               </div>
 
               <div className="input-box">
-                <span className="details">Severity*</span>
+                <span className="details">Severity</span>
                 <input
                   type="string"
                   placeholder="Eg: HIGH"
-                  required
+            
                   onChange={(event) => {
                     setSeverity(event.target.value);
                   }}
@@ -157,11 +156,11 @@ const Form_page = () => {
               </div>
 
               <div className="input-box">
-                <span className="details">Path Name*</span>
+                <span className="details">Path Name</span>
                 <input
                   type="string"
                   placeholder="Eg: connectors/apigateway.go"
-                  required
+              
                   onChange={(event) => {
                     setPathname(event.target.value);
                   }}
