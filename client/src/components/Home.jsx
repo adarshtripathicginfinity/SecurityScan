@@ -13,7 +13,7 @@ const Home = () => {
                 <SwipeDrawer />
                 <Routes>        
                     <Route path='/' element={<Form_Page />} />
-                    <Route path='/archive' element={<Result_list />} />
+                    <Route path='/Result_list' element={<Result_list />} />
                 </Routes>
             </Router>
         </Box>
