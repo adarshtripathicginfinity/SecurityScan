@@ -15,7 +15,7 @@ const Form_page = () => {
   const [ScanningAt, setScanningAt] = useState();
   const [FinishedAt, setFinishedAt] = useState();
   const [Ruleid, setRuleid] = useState("");
-  const [description, setdescription] = useState("");
+  const [Descriptions, setdescription] = useState("");
   const [Severity, setSeverity] = useState("");
   const [Pathname, setPathname] = useState("");
 
@@ -27,7 +27,7 @@ const Form_page = () => {
       ScanningAt: ScanningAt,
       FinishedAt: FinishedAt,
       Ruleid: Ruleid,
-      description: description,
+      Descriptions: Descriptions,
       Severity: Severity,
       Pathname: Pathname,
     }).then(() => {
@@ -49,7 +49,7 @@ const Form_page = () => {
             <div className="user-details">
 
               <div className="input-box">
-                <span className="details">Repository Name*</span>
+                <span className="details">Repository Name</span>
                 <input
                   type="string"
                   placeholder="Enter your Repository Name"
@@ -62,7 +62,7 @@ const Form_page = () => {
 
               <div className="input-box">
                 <span for="cars" className="details">
-                  Status*
+                  Status
                 </span>
                 <select
                   name="cars"
@@ -120,7 +120,7 @@ const Form_page = () => {
 
             <div className="user-details">
               <div className="input-box">
-                <span className="details">RuleId*</span>
+                <span className="details">RuleId</span>
                 <input
                   type="string"
                   placeholder="Eg: G402"
@@ -132,7 +132,7 @@ const Form_page = () => {
               </div>
 
               <div className="input-box">
-                <span className="details">Description*</span>
+                <span className="details">Description</span>
                 <input
                   type="string"
                   placeholder="Eg: TLS InsecureSkipVerify set true."
